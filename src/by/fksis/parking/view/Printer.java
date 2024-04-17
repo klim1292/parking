@@ -43,7 +43,8 @@ public final class Printer {
 		return fields;
 	}
 	
-	public void printParkedCarData(Object... cars) {
+	@SuppressWarnings("unchecked")
+	public <T> void printParkedCarData(T... cars) {
 		if(cars.length > 0) {
 			int spot = 1;
 			System.out.println("--------------------------------------------------------------------------------");
@@ -59,7 +60,7 @@ public final class Printer {
 		}
 	}
 	
-	public void printAllParkedCars(Object[] cars) {
+	public <T> void printAllParkedCars(T[] cars) {
 		printParkedCarData(cars);
 		System.out.printf("%d free of %d%n", Arrays.stream(cars).filter(Objects::isNull).count(), cars.length);
 	}

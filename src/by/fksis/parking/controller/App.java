@@ -54,7 +54,7 @@ public class App {
 						if(!enteredData[3].isBlank()) {
 							criterion = criterion.and(car -> car.getColor().equalsIgnoreCase(enteredData[3]));
 						}
-						printer.printParkedCarData((Object[])parking.search(criterion));
+						printer.printParkedCarData(parking.search(criterion));
 					} break;
 					case 4: {
 						printer.printAllParkedCars(parking.cars());

@@ -47,7 +47,7 @@ public class Parking {
 	}
 	
 	public ParkedCar[] cars() {
-		return cars.clone();
+		return Arrays.copyOf(cars, cars.length);
 	}
 	
 }
